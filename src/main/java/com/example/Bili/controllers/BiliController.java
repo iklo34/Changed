@@ -9,8 +9,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class BiliController {
+    public  static  void  neg(){
+        System.out.println("3");
+    }
 
-    @GetMapping("/form")
+    @GetMapping("/")
     public String showForm() {
         return "form";
     }
@@ -19,6 +22,7 @@ public class BiliController {
         model.addAttribute("name", name);
         model.addAttribute("age", age);
         model.addAttribute("nickname", nickname);
+        model.addAttribute("Banger", age);
         return "display";
     }
 
